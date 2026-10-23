@@ -18,7 +18,9 @@ const published = { _status: { equals: 'published' } } as const
 
 export const getSettings = cache(async (): Promise<SiteSetting> => {
   const p = await payload()
-  return p.findGlobal({ slug: 'site-settings', depth: 1 })
+  const settings = await p.findGlobal({ slug: 'site-settings', depth: 1 })
+  // Before Site settings is first saved, the global comes back empty.
+  return { ...settings, name: settings.name || 'Portfolio' }
 })
 
 export const getProjects = cache(async (): Promise<Project[]> => {

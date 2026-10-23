@@ -54,13 +54,14 @@ updates automatically. Before deploying a schema change, create a migration and 
 pnpm migrate:create <name>
 ```
 
-Vercel runs `payload migrate` before every build (`pnpm run build:prod`).
+Vercel runs `payload migrate` over the direct connection before every build (`pnpm run build:prod`).
 
 ## Production environment variables (Vercel)
 
 | Variable | Value |
 |---|---|
-| `DATABASE_URL` | Neon pooled connection string |
+| `DATABASE_URL` | Neon **pooled** connection string (`-pooler` host), used by the app |
+| `DATABASE_URL_UNPOOLED` | Neon **direct** connection string, used only for migrations |
 | `PAYLOAD_SECRET` | random 32+ byte hex string |
 | `NEXT_PUBLIC_SERVER_URL` | `https://<your-domain>` |
 | `S3_BUCKET` | R2 bucket name |
