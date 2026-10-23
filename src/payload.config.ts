@@ -53,6 +53,9 @@ export default buildConfig({
   plugins: [
     s3Storage({
       enabled: useR2,
+      // Keep the plugin's columns (prefix, _objectKey) in the schema even when R2 is off,
+      // so migrations generated locally match what production expects.
+      alwaysInsertFields: true,
       collections: {
         media: mediaPublicURL
           ? {
