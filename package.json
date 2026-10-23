@@ -46,7 +46,7 @@
     "typescript": "5.7.3"
   },
   "engines": {
-    "node": ">=22"
+    "node": "24.x"
   },
   "packageManager": "pnpm@12.15.0"
 }
