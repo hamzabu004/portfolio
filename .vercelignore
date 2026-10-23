@@ -1,0 +1,8 @@
+# Never upload local secrets or build output; Vercel gets env vars from project settings.
+.env
+.env.*
+!.env.example
+node_modules
+.next
+media
+*.tsbuildinfo
