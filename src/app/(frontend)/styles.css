@@ -297,7 +297,7 @@ figcaption { color: var(--muted); font-size: 0.78rem; margin-top: 10px; }
 .stats dl > div { padding: 18px 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); display: flex; flex-direction: column; }
 .stats dt { order: 2; font-size: 0.82rem; color: var(--ink); }
 .stats dd { order: 1; margin: 0 0 4px; font-size: 1.9rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; color: var(--ink-strong); }
-.stats dd.stat-note { order: 3; font-family: var(--sans); font-size: 0.74rem; color: var(--muted); margin: 4px 0 0; }
+.stats dd.stat-note { order: 3; font-size: 0.74rem; font-weight: 400; letter-spacing: 0; color: var(--muted); margin: 4px 0 0; }
 
 .table-scroll { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
